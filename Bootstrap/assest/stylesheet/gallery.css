@@ -1,0 +1,353 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0px;
+    /* overflow-x:hidden; */
+    font-family:'Secular One', sans-serif;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 0px;
+}
+.row {
+    display: flex;
+}
+.container {
+    width: 1100px;
+    margin: 0 125px;
+    padding-right:10px;
+    padding-left:10px;
+    margin-bottom:0px;
+}
+
+/* header top */
+
+#header{
+    padding-top:0px;
+    padding-bottom:2px;
+    padding-right:0px;
+    padding-left:0px;
+    background-color:white;
+    display:flex;
+    /* justify-content:space-between; */
+}
+#header .row {
+    justify-content: space-between;
+}
+#logo a {
+    /* text-transform: uppercase; */
+    font-size: 40px;
+    color: black;
+}
+#logo h1{ 
+    padding:0px;
+    display:inline-block;
+    line-height:0;
+    font-family:'Secular One', sans-serif;
+}
+#logo a{
+    color:black;
+    display:inline-block;
+}
+#logo h1 span img{
+    margin-top:12px;
+    margin-left:-15px;
+    width:220px;
+}
+#num-mail{
+    float:right;
+}
+#num-mail ul{
+    margin:0px;
+    padding:0px;
+}
+#num-mail ul li{
+    display:inline-block;
+    color:black;
+    font-size:15px;
+    text-align:center;
+    padding:12px 0px;
+    margin-right:70px;
+    margin-left:70px;
+}
+#num-mail li span{
+    color:black;
+    font-size:19px;
+}
+#num-mail li a{
+    text-decoration:none;
+    color:black;
+    padding:1px;
+    display:inline-block;
+}
+#num-mail i{
+    margin:0px;
+    margin-top:35px;
+    padding:0px;
+}
+.fa{
+    margin:5px;
+    padding:15px;
+    color:#49c7ed;
+    line-height:1px;
+}
+#social-group {
+    margin:15px;
+    padding:15px;
+}
+#social-group ul li{
+    display:inline-block;
+}
+#social-group img{
+    max-height: 20px;
+    max-width:20px;
+}
+
+/* header navigation */
+
+.header-nav{
+    background-color: rgb(155, 205, 243);
+    width:100%;
+    height:65px;
+}
+#nav-bar ul{
+    text-align:center;
+}
+#nav-bar ul li{
+    display:inline-block;
+    position:relative;
+    /* margin:10px 20px 0px; */
+    margin:0px 5px;
+    float:none;
+    list-style: none;
+      
+}
+#nav-bar ul li a{
+    display:block;
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:21px 30px;
+    position:relative;
+    overflow:hidden;
+    z-index:9;
+}
+#nav-bar li:after, #nav-bar li:before{
+    content:"";
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    height:1px;
+    width:100%;
+    opacity:0;
+    transition:5s;
+    z-index:-1;
+}
+#nav-bar .caption{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color:#142340;
+    /* left:0px; */
+    top:0px;
+    transform:translate(0%,0%);
+    transition:0.5s;
+    overflow: hidden;
+}
+#nav-bar a:hover .caption{
+    transform:translate(0%,0%);
+}
+#nav-bar .caption span{
+    position:absolute;
+    top:45%;
+    width:100%;
+    left:0px;
+}
+.header-nav{
+    box-shadow: 0px -1px 10px 0px rgba(4, 3, 0, 0.62);
+}
+
+/* banner */
+#bannerImg{
+    background-image:url("../images/Secure-Collaboration.jpg");
+    /* width:100% 100%; */
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    height:340px;
+    z-index:-10;
+    position:relative;
+}
+
+/* Gallery-section */
+.gallery-section{
+    padding:4em 0;
+}
+.gallery-section h2{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight:500;
+    color: #000;
+    margin-bottom: 1.2em;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+}
+.grid-img {
+    padding: 8px;
+    margin-bottom:0px;
+}
+.grid-img img{
+    height:auto;
+    max-width:100%;
+    display:block;
+    /* vertical-align: middle; */
+    overflow-x:hidden;
+}
+.grid-img img:hover img{
+    cursor: pointer;
+
+}
+.gallery-grid-top .row{
+        justify-content: space-between;
+}
+.gallery-grid-top figure{
+    /* margin:0px 0px 10px; */
+    margin-bottom:0px;
+}
+.gallery-grid-top .grid-img {
+   position:relative;
+   overflow:hidden;
+}
+.grid-img .caption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba( 20, 35, 64, 0.5);
+    left: 0px;
+    right: 0px;
+    top:0px;
+    color:ghostwhite;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    transform: rotateY(-90deg) rotateX(-90deg);
+    transition: 0.5s;
+    padding:10px;
+}
+.grid-img:hover .caption{
+    transform:translate(0%,0%);
+}
+.grid-img .caption span{
+    position:absolute;
+    bottom:45%;
+    width:100%;
+    left:0px;
+}
+
+
+/* Footer */
+.agile-footer{
+    margin-top:55px;
+    background-color:#142340;
+}
+.list-footer{
+    float:left;
+}
+.footer-section{
+    padding: 5em 0;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+ul.footer-nav {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    display:block;
+}
+.footer-nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1em 1em;
+    margin: 0 2.1em 0 0;
+}
+.footer-nav li a {
+    color: #49c7ed;
+    text-decoration:none;
+    outline:none;
+}
+.list-footer p {
+    padding: 1em 0 0;
+    font-size: 0.9em;
+    width: 77%;
+    color: #999;
+    line-height: 1.8em;
+    margin:0px;
+}
+.agileinfo-sub {
+    padding: 1em 0em 0 3em;
+    float:right;
+}
+.agileinfo-sub h6 {
+    color: #fff;
+    font-size: 1.1em;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.agileinfo-sub a {
+    text-decoration: underline;
+    padding: 1em 0;
+    display: block;
+    color: #fff;
+    display:inline-block;
+}
+.agileinfo-sub a:hover{
+    color:#49c7ed;
+}
+
+
+
+
+.copyright{
+    padding:2em 0;
+    background-color:black;
+}
+.text-center{
+    text-align: center;
+}
+.copyright p{
+    color:white;
+    /* font-weight:500; */
+    font-size:1em;
+    margin:0px;
+}
+.copyright a{
+    color:#49c7ed;
+    text-decoration:none;
+    outline:none;
+    background-color:transparent;
+}
+.copyright a:hover {
+    color:white;
+    text-decoration: none;
+}
